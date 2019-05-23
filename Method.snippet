@@ -2,34 +2,31 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Property With NotifyChanged</Title>
-			<Shortcut>propn</Shortcut>
+			<Title>Create method</Title>
+			<Shortcut>Func</Shortcut>
 		</Header>
 		<Snippet>
 			<Imports>
 				<Import>
-					<Namespace>System.ComponentModel</Namespace>
+					<Namespace>System.Diagnostics</Namespace>
 				</Import>
 			</Imports>
 			<Declarations>
 				<Literal>
-					<ID>myProp</ID>
+					<ID>Type</ID>
 					<ToolTip>name of the Property</ToolTip>
-					<Default>myVar</Default>
+					<Default>void</Default>
 				</Literal>
 				<Literal>
-					<ID>Type</ID>
+					<ID>MethodName</ID>
 					<ToolTip>Type of Property</ToolTip>
-					<Default>int</Default>
+					<Default>Method</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="CSharp">
-				<![CDATA[private $Type$ _$myProp$;
-		public $Type$ $myProp$ {
-			get { return _$myProp$; }
-			set { _$myProp$=value;
-			      RaisePropertyChanged(); }
-		}]]>
+				<![CDATA[public $Type $MethodName(){
+				
+				}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

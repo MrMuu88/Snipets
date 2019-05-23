@@ -5,9 +5,16 @@
 			<Title>RaisePropertyChanged method implementation</Title>
 			<Shortcut>rpropch</Shortcut>
 		</Header>
+		
+					
 		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Runtime.CompilerServices</Namespace>
+				</Import>
+			</Imports>
 			<Code Language="CSharp">
-			<![CDATA[private void RaisePropertyChanged(string PropertyName){
+			<![CDATA[private void RaisePropertyChanged(string [CallerMemberName] PropertyName = null){
 				PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(PropertyName));
 			}
 			]]>
