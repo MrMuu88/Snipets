@@ -14,7 +14,7 @@
 				</Import>
 			</Imports>
 			<Code Language="CSharp">
-			<![CDATA[private void RaisePropertyChanged(string [CallerMemberName] PropertyName = null){
+			<![CDATA[private void RaisePropertyChanged([CallerMemberName] string PropertyName = null){
 				PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(PropertyName));
 			}
 			]]>
