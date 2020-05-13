@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Test Class Initialization</Title>
+      <Shortcut>classi</Shortcut>
+      <Description>Code snippet for a test class Initialization</Description>
+      <Author>Tsimon</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp"><![CDATA[[ClassInitialize]
+      public static void InitializeClass(TestContext context){
+	  }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
