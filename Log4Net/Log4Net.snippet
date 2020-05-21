@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<!-- schema reference:
+	https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets-schema-reference?view=vs-2019
+-->
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>add a declaration for static Ilog instance</Description>
+			<Title>Log4Net Snippets</Title>
+			<Shortcut>l4</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="decl/type">
+				<![CDATA[private static readonly ILog Log = LogManager.GetLogger(typeof($classname$));]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log debug statement</Description>
+			<Title>Log.Debug</Title>
+			<Shortcut>ld</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Log.Debug($"{nameof(#classname#)}- #selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Info statement</Description>
+			<Title>Log.Info</Title>
+			<Shortcut>li</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Log.Info($"{nameof(#classname#)}- #selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Warn statement</Description>
+			<Title>Log.Warn</Title>
+			<Shortcut>lw</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Log.Warn($"{nameof(#classname#)}- #selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Error statement</Description>
+			<Title>Log.Error</Title>
+			<Shortcut>le</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Log.Error($"{nameof(#classname#)}- #selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet><CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Error statement with Exception</Description>
+			<Title>Log.Error and Exception</Title>
+			<Shortcut>lex</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>log4net</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Log.Error($"{ex.Source}-{ex.TargetSite.Name} has thrown {ex.GetType().Name}");#end#]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
