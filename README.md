@@ -1,5 +1,5 @@
 # BAU Snipets
-these are the snipets that I regularly using in visual studio for BAU work
+these are the snipets that I regularly using in visual studio for BAU work.</br>
 the repo contains a SnippetBase.snippet file that can be used as a starting template for a new snippet
 ## General C#
  <table>
