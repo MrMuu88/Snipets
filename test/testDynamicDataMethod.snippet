@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<!-- schema reference:
+	https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets-schema-reference?view=vs-2019
+-->
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Dynamic data method for data driven unit testing</Title>
+			<Shortcut>testdm</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<!-- Use this to automatically add usings -->
+				<Import>
+					<Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+					<Namespace>System.Collections.Generic</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<!-- Use this to add variables to snippet-->
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>name of method</ToolTip>
+					<Default>GetData</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp">
+				<!-- $Selected$ when using ctrl+k,s (suround with) the selected text will be inserted to this literals location -->
+				<!-- $end$ after inserting the snipet, the cursor will be placed here -->
+				<![CDATA[
+private static IEnumerable<object[]> $methodName$ (){
+	yield return new object[] {$end$};
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
