@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<!-- schema reference:
+	https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets-schema-reference?view=vs-2019
+-->	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log debug statement</Description>
+			<Title>Log.Debug</Title>
+			<Shortcut>logd</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogDebug($"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Info statement</Description>
+			<Title>Log.Info</Title>
+			<Shortcut>logi</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogInformation($"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Warn statement</Description>
+			<Title>Log.Warn</Title>
+			<Shortcut>logw</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogWarning($"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Error statement</Description>
+			<Title>Log.Error</Title>
+			<Shortcut>loge</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogError($"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>adds log Error statement with Exception</Description>
+			<Title>Log.Error and Exception</Title>
+			<Shortcut>logex</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogError(ex,$"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
