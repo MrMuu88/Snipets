@@ -5,6 +5,26 @@
 -->	
 	<CodeSnippet Format="1.0.0">
 		<Header>
+			<Description>adds log Info statement</Description>
+			<Title>Log.Info</Title>
+			<Shortcut>logi</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations></Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[Logger.LogInformation($"#selected##end#");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
 			<Description>adds log debug statement</Description>
 			<Title>Log.Debug</Title>
 			<Shortcut>logd</Shortcut>
@@ -25,9 +45,9 @@
 	
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Description>adds log Info statement</Description>
-			<Title>Log.Info</Title>
-			<Shortcut>logi</Shortcut>
+			<Description>adds log Trace statement</Description>
+			<Title>Log.Trace</Title>
+			<Shortcut>logt</Shortcut>
 			<author>simontjoszef@gmail.com</author>
 		</Header>
 		<Snippet>
@@ -38,7 +58,7 @@
 			</Imports>
 			<Declarations></Declarations>
 			<Code Language="CSharp" kind="body/method" Delimiter="#">
-				<![CDATA[Logger.LogInformation($"#selected##end#");]]>
+				<![CDATA[Logger.LogTrace($"#selected##end#");]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
