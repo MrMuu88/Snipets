@@ -102,4 +102,74 @@
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>Constructor with ILogger</Description>
+			<Title>Constructor with ILogger</Title>
+			<Shortcut>ctorl</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Function>ClassName()</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[
+public ILogger<#classname#> Logger{get; private set;}
+
+public #classname#(ILogger<#classname#> logger)
+{
+	Logger = logger;
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Description>Constructor with ILogger and options</Description>
+			<Title>Constructor with ILogger and options</Title>
+			<Shortcut>ctorlo</Shortcut>
+			<author>simontjoszef@gmail.com</author>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Microsoft.Extensions.Logging</Namespace>
+				</Import>
+				<Import>
+					<Namespace>Microsoft.Extensions.Options</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Function>ClassName()</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp" kind="body/method" Delimiter="#">
+				<![CDATA[
+public ILogger<#classname#> Logger{get; private set;}
+public #classname#Configuration Config {get; private set;} 
+
+public #classname#(ILogger<#classname#> logger, IOptions<#classname#Configuration> options)
+{
+	Logger = logger;
+	Config = options?.Value ?? new #classname#Configuration();
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>
